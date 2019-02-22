@@ -1,11 +1,15 @@
 package com.example.demo.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
+import java.util.List;
 
 /**
  * Created by Alexandre on 09/04/2018.
  */
 @Entity
+@Table(name = "client")
 public class Client {
 
     @Id
@@ -41,4 +45,5 @@ public class Client {
     public void setNom(String nom) {
         this.nom = nom;
     }
+
 }
