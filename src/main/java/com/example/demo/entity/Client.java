@@ -3,6 +3,8 @@ package com.example.demo.entity;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -21,6 +23,9 @@ public class Client {
 
     @Column
     private String nom;
+
+    @Column
+    private LocalDate dateNaissance;
 
     public Long getId() {
         return id;
@@ -46,4 +51,11 @@ public class Client {
         this.nom = nom;
     }
 
+    public LocalDate getDateNaissance() {
+        return dateNaissance;
+    }
+
+    public void setDateNaissance(LocalDate dateNaissance) {
+        this.dateNaissance = dateNaissance;
+    }
 }

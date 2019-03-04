@@ -51,11 +51,17 @@ public class InitData implements ApplicationListener<ApplicationReadyEvent> {
         Facture facture1 = newFacture(client3);
         em.persist(facture1);
 
+        Facture facture2 = newFacture(client2);
+        em.persist(facture2);
+
         LigneFacture ligneFacture1 = newLigneFacture(article1, facture1, 2);
         em.persist(ligneFacture1);
 
         LigneFacture ligneFacture2 = newLigneFacture(article2, facture1, 1);
         em.persist(ligneFacture2);
+
+        LigneFacture ligneFacture3 = newLigneFacture(article3, facture2, 2);
+        em.persist(ligneFacture3);
     }
 
     private Client newClient(String nom, String prenom) {
